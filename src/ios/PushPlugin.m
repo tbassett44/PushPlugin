@@ -260,14 +260,6 @@
 
     [self successWithMessage:[NSString stringWithFormat:@"app badge count set to %d", badge]];
 }
-- (void)getApplicationIconBadgeNumber:(CDVInvokedUrlCommand *)command {
-
-    self.callbackId = command.callbackId;
-
-    int badge=[UIApplication sharedApplication].applicationIconBadgeNumber;
-    [self successWithMessage:[NSString stringWithFormat:@"badge count is %d", badge]];
-
-}
 -(void)successWithMessage:(NSString *)message
 {
     if (self.callbackId != nil)
