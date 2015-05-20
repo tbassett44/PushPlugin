@@ -120,12 +120,7 @@ public class GCMIntentService extends GCMBaseIntentService {
 		if (msgcnt != null) {
 			mBuilder.setNumber(Integer.parseInt(msgcnt));
 		}
-        String thesound=extras.getString("sound");
-        if (thesound != null){
-            Uri usesound=Uri.parse("android.resource://" + context.getPackageName() + "/" +thesound);
-            mBuilder.setContentText(usesound.toString());
-            mBuilder.setSound(usesound);
-        }
+
 		int notId = 0;
 		
 		try {
